@@ -35,7 +35,9 @@ body {
 
 /* Float Animation (Gentle Breeze) - Softened */
 @keyframes breeze {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(var(--base-rotation, 0deg));
     }
 
@@ -543,11 +545,12 @@ footer {
 
 .stamp {
     position: absolute;
-    width: 140px;
-    height: 180px;
+    width: 170px;
+    height: 220px;
     background: white;
     padding: 10px;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
+    /* Extra space for the stamp 'footer' look */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
     transition: var(--transition-breeze);
@@ -559,6 +562,12 @@ footer {
         radial-gradient(circle at 100% 0, transparent 8px, white 8px),
         radial-gradient(circle at 0 100%, transparent 8px, white 8px),
         radial-gradient(circle at 100% 100%, transparent 8px, white 8px);
+}
+
+.stamp.horizontal {
+    width: 290px;
+    height: 180px;
+    padding-bottom: 10px;
 }
 
 /* Jagged Edge Effect */
@@ -600,8 +609,27 @@ footer {
     transform: rotate(var(--base-rotation));
 }
 
+.stamp:nth-child(5) {
+    --base-rotation: -10deg;
+    transform: rotate(var(--base-rotation));
+}
+
+.stamp:nth-child(6) {
+    --base-rotation: 5deg;
+    transform: rotate(var(--base-rotation));
+}
+
+.stamp:nth-child(7) {
+    --base-rotation: -4deg;
+    transform: rotate(var(--base-rotation));
+}
+
 .stamp:hover {
     transform: scale(1.2) rotate(0deg) translateY(-15px) !important;
     z-index: 50;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.stamp:nth-child(8) {
+    --base-rotation: 2deg;
+    transform: rotate(var(--base-rotation));
 }
