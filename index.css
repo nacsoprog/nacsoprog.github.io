@@ -243,20 +243,20 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(8px);
+    width: 65px;
+    height: 65px;
+    background: var(--bg-warm);
+    border: 3px solid var(--accent-forest);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 1.2rem;
+    color: var(--accent-forest);
+    font-size: 1.8rem;
     opacity: 0;
     transition: var(--transition-breeze);
-    border: 2px solid white;
-    z-index: 5;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(94, 139, 126, 0.3);
 }
 
 .play-overlay i {
@@ -549,7 +549,6 @@ footer {
     height: 220px;
     background: white;
     padding: 10px;
-    padding-bottom: 30px;
     /* Extra space for the stamp 'footer' look */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
@@ -629,6 +628,7 @@ footer {
     z-index: 50;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
+
 .stamp:nth-child(8) {
     --base-rotation: 2deg;
     transform: rotate(var(--base-rotation));
